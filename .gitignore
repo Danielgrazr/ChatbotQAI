@@ -1,4 +1,4 @@
 env/
-*.sqlite
+# *.sqlite
 *.pkl
 __pycache__/
