@@ -1,0 +1,62 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": [
+        "Hola", "Que tal?", "Buen dia", "Oye Qualli", "Hey", "buenas tardes", "buenos dias", "que onda"
+      ],
+      "responses": [
+        "¡Hola! Soy Qualli, tu Asistente IA. Puedo ayudarte a consultar los defectos por área. ¿En qué área te gustaría buscar?"
+      ]
+    },
+    {
+      "tag": "consultar_area",
+      "patterns": [
+        "Busca en Moldeo", "Quiero ver los defectos de Ensamble", "Muestrame el area de Empaque", "Revisar Boligrafo",
+        "Me gustaria ver Kinera", "Que hay en Tintas", "Area de Moldeo", "Ensamble", "Empaque", "Boligrafo", "Kinera", "Tintas",
+        "Quiero saber sobre el area de Moldeo", "dame los defectos de tintas", "ver empaque", "puedes buscar en moldeo?", "los defectos de ensamble por favor",
+        "cuales son los defectos de boligrafo", "necesito los de kinera"
+      ],
+      "responses": [
+        "Procesando tu solicitud para el área..."
+      ]
+    },
+    {
+      "tag": "seleccionar_defecto",
+      "patterns": [
+        "Que es el alabeo?", "Dime sobre el defecto incompleto", "Explicame la rebaba", "Que es una fuga", "Hablame de la mala impresion",
+        "alabeo", "incompleto", "rebaba", "fuga", "mala impresion", "codigo de barras ilegible", "fuera de dimension",
+        "Dime que es 'fuera de dimension'", "que significa alabeo", "el defecto de fuga"
+      ],
+      "responses": [
+        "Claro, un momento mientras busco la información sobre el defecto..."
+      ]
+    },
+    {
+      "tag": "agradecimiento",
+      "patterns": [
+        "Gracias", "Muchas gracias", "Te lo agradezco", "ok gracias", "muy amable"
+      ],
+      "responses": [
+        "¡De nada! ¿Hay algo más en lo que pueda ayudarte?"
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": [
+        "Adios", "Hasta luego", "Bye", "Nos vemos", "chao", "ya es todo"
+      ],
+      "responses": [
+        "Que tengas un buen día.", "Ha sido un placer ayudarte. ¡Hasta pronto!"
+      ]
+    },
+    {
+      "tag": "sin_respuesta",
+      "patterns": [],
+      "responses": [
+        "No te he entendido bien. Recuerda que puedo buscar defectos en las áreas: Moldeo, Ensamble, Empaque, Bolígrafo, Kinera y Tintas.",
+        "No tengo una respuesta para eso. Intenta decirme un área, por ejemplo: 'Busca en Moldeo'."
+      ]
+    }
+  ]
+}
