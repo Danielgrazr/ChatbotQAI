@@ -45,7 +45,7 @@ def get_defectos():
     if not sub_area_name: return jsonify({"error": "Falta el parámetro 'sub_area_name'"}), 400
 
     query = """
-        SELECT d.nombre_defecto, d.descripcion FROM defectos d
+        SELECT d.nombre_defecto, d.descripcion, d.imagen_url FROM defectos d
         JOIN subarea_defecto sd ON d.id_defecto = sd.id_defecto
         JOIN sub_areas sa ON sd.id_sub_area = sa.id_sub_area WHERE sa.nombre_sub_area = ?
     """
@@ -53,7 +53,7 @@ def get_defectos():
     if defectos_result is None: return jsonify({"error": "Error de base de datos"}), 500
     
     # Devolvemos una lista de objetos, cada uno con nombre y descripción
-    defectos_list = [{"nombre": item[0], "descripcion": item[1]} for item in defectos_result]
+    defectos_list = defectos_list = [{"nombre": item[0], "descripcion": item[1], "imagen_url": item[2]} for item in defectos_result]
     return jsonify(defectos_list)
 
 # --- Iniciar el Servidor ---
